@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Todo List App</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="circle" style="width: 100px; height: 100px; background-color: rgba(255, 99, 132, 0.5); top: 10%; left: 20%;"></div>
+    <div class="circle" style="width: 80px; height: 80px; background-color: rgba(54, 162, 235, 0.5); top: 50%; left: 40%;"></div>
+    <div class="circle" style="width: 120px; height: 120px; background-color: rgba(75, 192, 192, 0.5); top: 80%; left: 70%;"></div>
+    <div class="circle" style="width: 60px; height: 60px; background-color: rgba(153, 102, 255, 0.5); top: 30%; left: 80%;"></div>
+    <div class="circle" style="width: 90px; height: 90px; background-color: rgba(255, 206, 86, 0.5); top: 60%; left: 10%;"></div>
+
+    <div class="todo-container">
+        
+    <h1>Todo List App</h1>
+        <form id="todo-form">
+            <input type="text" id="task-name" placeholder="Task Name" required>
+            <input type="date" id="due-date" required>
+            <select id="category">
+                <option value="Work">Work</option>
+                <option value="Personal">Personal</option>
+                <option value="Shopping">Shopping</option>
+            </select>
+            <select id="priority">
+                <option value="High">High</option>
+                <option value="Medium">Medium</option>
+                <option value="Low">Low</option>
+            </select>
+            <input type="text" id="tags" placeholder="Tags">
+            <button type="submit">Add Task</button>
+        </form>
+        <div class="filter-buttons">
+            <button onclick="filterTasks('all')">All</button>
+            <button onclick="filterTasks('complete')">Complete</button>
+            <button onclick="filterTasks('pending')">Pending</button>
+        </div>
+        <ul id="task-list"></ul>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
